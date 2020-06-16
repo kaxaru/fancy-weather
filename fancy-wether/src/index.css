@@ -1,0 +1,467 @@
+p {
+    margin: 0px 0 0em;
+    line-height: 1.1285em;
+}
+
+body {
+    overflow: hidden;
+}
+
+.image-container:before {
+    content: ' ';
+    background-color: #ffe4c4;
+    position: absolute;
+    width: 100%;
+    height: 120vh;
+    z-index: -1;
+}
+
+.image-container__overlay {
+    background: rgba(153, 165, 161, 0.3);
+    height: 120vh;
+}
+
+.upper-widget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    height: 100px;
+}
+
+.left-panel {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    margin-left: 50px;
+}
+
+.update-image {
+    background: rgba(180,184,187,.8) url('./img/update-button.svg') no-repeat bottom !important;
+    background-size: 2.5rem
+}
+
+.langpanel {
+    background: rgba(180,184,187,.8) !important;
+}
+
+.langpanel .menu {
+    background: rgba(180,184,187,.8) !important;
+}
+
+.tempscale button {
+    background: rgba(180,184,187,.8) !important;
+}
+
+.update-image .spinner{
+    width: 1rem;
+    height: 2rem;
+    -webkit-animation: spin 1.4s ease-in-out;
+    animation: spin 1.4s ease-in-out;
+}
+
+.right-panel {
+    margin-right: 50px;
+}
+
+.right-panel .microphone {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 194px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.main-wrapper {
+ display: flex;
+ -webkit-box-pack: justify;
+ justify-content: space-between;
+ -webkit-box-align: center;
+ align-items: center;
+ flex-wrap: wrap;
+ margin: 0 4vw;
+}
+
+.map-wrapper {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width:100%;
+}
+
+.wheather-widget {
+    display: grid;
+    grid-template-columns: repeat(3,20rem);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.wheather-widget__wheather-today {
+    z-index:10;
+    grid-column: 1/2;
+    grid-row: 3/5;
+    transform: translateX(17%) translateY(5%);
+}
+.wheather-widget__play-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-70px);
+}
+
+.wheather-widget__play-wrapper .grid {
+    width: 50%;
+}
+
+.wheather-widget__wheather-today button {
+    width: 50px;
+    height: 50px;
+}
+
+.wheather-widget__location {
+    display:flex;
+    align-items: center;
+    margin-top: 20px;
+    grid-column: 1/4;
+    font-size: 4.4rem;
+}
+
+.wheather-widget__date-time {
+    grid-column: 1/4;
+    margin-top: 1rem;
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.wheather-widget__temperature-today {
+    grid-column: 1/3;
+    grid-row: 3/5;
+    text-align: center;
+    font-size: 26.6rem;
+    transform: translateY(15px)
+}
+
+.wheather-widget__tempScale-today {
+    grid-column: 3/3;
+    grid-row: 3/5;
+    font-size: 11.6rem;
+    transform: translateX(-44%);
+}
+
+.wheather-widget__wheather-icon {
+    grid-column: 3/3;
+    grid-row: 3;
+    width: 200px !important;
+    height: 100px !important;
+    transform: translateY(-16%) translateX(10px);
+}
+
+.wheather-widget__play {
+    background: rgba(180,184,187,.9) !important;
+}
+
+.coordinates-widget {
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.wheather-widget__info {
+    grid-column: 3/3;
+    grid-row: 3/5;
+    transform: translateY(50%) translateX(-18%);
+}
+
+.forecast-wrapper{
+    display:flex;
+}
+
+.forecast {
+    display: grid;
+    margin-right: 5rem;
+}
+
+.forecast__day {
+    grid-column: 1/4;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.forecast .tempScale {
+    font-size: 2rem
+}
+
+.forecast__temp {
+    font-size: 8rem;
+}
+
+.forecast__icon {
+    width: 150px !important;
+    height: 75px !important;
+}
+
+.search-panel__button {
+    background: rgba(180,184,187,.9) !important;
+}
+
+.search-panel__button i  {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.search-panel input {
+    width: 225px;
+}
+
+@media only screen and  (max-width: 1600px) {
+    body {
+        overflow: auto;
+    }
+
+    .image-container { 
+        height: 200vh !important;
+    }
+
+    .image-container:before  {
+        height: 200vh;
+    }
+
+    .image-container__overlay {
+        height: 200vh;
+    }
+
+    .wheather-widget {
+        grid-template-columns: repeat(3,25rem);
+    }
+
+    .wheather-widget__temperature-today {
+        font-size: 22.6rem;
+    }
+  
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1200px) {
+    .main-wrapper {
+        justify-content: center;
+        margin: 0px 12vw;
+    }
+
+    .wheather-widget {
+        grid-template-columns: repeat(3,20rem);
+    }
+
+    .wheather-widget__temperature-today {
+        font-size: 20.6rem;
+        transform: translateX(-12%) translateY(30px);
+    }
+
+    .wheather-widget__tempScale-today {
+        font-size: 6.6rem;
+        transform: translateX(-70%);
+    }
+    .wheather-widget__play-wrapper{
+        transform: translateX(-40%);
+    }
+
+    .wheather-widget__info {
+        transform: translateY(61%) translateX(-63%);
+    }
+
+    .wheather-widget__wheather-icon{
+        grid-column: 2/3;
+        grid-row: 3/3;
+        width: 90%;
+        transform: translateX(70%) translateY(-16%);
+    }
+    
+}
+
+@media only screen and (max-width: 850px) {
+    .main-wrapper {
+        margin: 0px 4vw;
+    }
+
+    .wheather-widget {
+        grid-template-columns: repeat(10,5rem)
+    }
+
+    .wheather-widget__location {
+        grid-column: 4;
+    }
+
+    .wheather-widget__date-time {
+        grid-column: 4/13;
+        transform: translateX(-10%);
+    }
+
+    .wheather-widget__play-wrapper {
+        transform: none;
+    }
+    .wheather-widget__wheather-today {
+        grid-column: 2/3;
+    }
+    .wheather-widget__temperature-today {
+        grid-column: 4/4;
+        font-size: 16.6rem;
+    }
+    .wheather-widget__tempScale-today{
+        grid-column: 8;
+        font-size: 5.6rem;
+    }
+    .wheather-widget__wheather-icon {
+        grid-column: 2/4;
+        grid-row: 3/5;
+        transform: translateX(-12%) translateY(103px)
+    }
+    .wheather-widget__info {
+        grid-column: 7/9;
+        grid-row: 3/5;
+        transform: translateY(42%) translateX(76%)
+    }
+
+    .wheather-widget__play-wrapper .grid {
+        width: 200px;
+    }
+
+    .forecast-wrapper{
+        grid-column: 4;
+        grid-row: 5;
+        flex-direction: column;
+    }
+
+    .map-widget{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .upper-widget {
+        flex-wrap: wrap;
+        height: 150px;
+        width: 76%;
+        margin: 0 auto;
+    }
+
+    .left-panel {
+        margin: 0;
+    }
+
+    .main-wrapper {
+        margin: 0px 4vw;
+    }
+
+    .wheather-widget {
+        grid-template-columns: repeat(10,32px)
+    }
+
+    .wheather-widget__location {
+        grid-column: 1;
+    }
+
+    .wheather-widget__date-time {
+        grid-column: 1/10;
+        transform: none;
+    }
+
+    .wheather-widget__play-wrapper {
+        transform: none;
+    }
+    .wheather-widget__wheather-today {
+        grid-column: 6/8;
+        grid-row: 3/3;
+    }
+    .wheather-widget__temperature-today {
+        grid-column: 1/4;
+        grid-row: 4;
+        font-size: 12.6rem;
+    }
+    .wheather-widget__tempScale-today{
+        grid-column: 7;
+        grid-row: 4;
+        transform: none;
+        font-size: 5.6rem;
+    }
+    .wheather-widget__wheather-icon {
+        grid-column: 3;
+        grid-row: 4/5;
+        transform: translateX(-47%) translateY(-55%);
+    }
+    .wheather-widget__info {
+        grid-column: 8/12;
+        grid-row: 4/5;
+        transform: translateY(54%) translateX(-4%);
+    }
+
+    .wheather-widget__play-wrapper .grid {
+        width: 200px;
+    }
+
+    .forecast-wrapper{
+        grid-column: 4;
+        grid-row: 5;
+        flex-direction: column;
+    }
+
+    .forecast__icon {
+        transform: translateX(-288px) translateY(50px);
+    }
+
+    .forecast__day {
+        font-size: 1.5rem;
+    }
+
+    .map-widget{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .map-wrapper {
+        position: relative;
+        margin-top: 30px;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .upper-widget { 
+        width: 95%;
+    }
+
+    .right-panel input {
+        width: 180px;
+    }
+
+    .right-panel .microphone {
+        left: 150px;
+    }
+
+    .wheather-widget__location {
+        font-size: 2.4rem;
+    }
+
+    .main-wrapper {
+        margin: 0;
+    }
+
+    .forecast-wrapper {
+        grid-column: 1;
+    }
+}
